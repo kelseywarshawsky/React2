@@ -1,28 +1,20 @@
 import axios from "axios";
-const BASEURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-const APIKEY = "?api-key=b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
-
-// export default {
-//   search: function(query) {
-//     return axios.get(BASEURL + APIKEY + "&q=" + query);
-//   }
-// };
 
 export default {
   // Gets all articles
   getArticles: function() {
     return axios.get("/api/articles");
   },
-  // Gets the article with the given id
-  getArticle: function(id) {
-    return axios.get("/api/articles/" + id);
-  },
-  // Deletes the article with the given id
+  // Deletes the book with the given id
   deleteArticle: function(id) {
     return axios.delete("/api/articles/" + id);
   },
-  // Saves a article to the database
+  // Saves a book to the database
   saveArticle: function(articleData) {
+    console.log(articleData);
     return axios.post("/api/articles", articleData);
+  },
+  findArticles: function(topic, startYear, endYear) {
+    return axios.get("https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=54d61f55f75244bb9819c29f5e41aa3f&q=" + topic + "&begin_date=" + startYear + "0101&end_date=" + endYear + "1231");
   }
 };

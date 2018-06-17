@@ -12,4 +12,3 @@ export const ResultsBox = ({ children }) => (
     </div>
 );
 
-export default ResultsBox;

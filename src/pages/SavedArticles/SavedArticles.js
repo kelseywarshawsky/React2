@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SavedBox from "../../components/SavedBox";
+import { SavedBox } from "../../components/SavedBox";
 import { ResultsBox, ResultsList, ListItem } from "../../components/ResultsBox";
 import API from "../../utils/API";
 

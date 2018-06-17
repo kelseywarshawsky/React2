@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBox.css";
 
-const SearchBox = () => (
+export const SearchBox = () => (
     <div className="container">
         <div className="card mb-4">
             <h5 className="card-header bg-info text-white"><i className="fa fa-newspaper-o" aria-hidden="true"></i> Query</h5>
@@ -25,5 +25,3 @@ const SearchBox = () => (
         </div>
     </div>
 );
-
-export default SearchBox;
